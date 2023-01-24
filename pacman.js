@@ -9,8 +9,8 @@ const pacArray = [
 ];
 
 // this variable defines what direction should PacMan go into:
-// 0 = left to right
-// 1 = right to left (reverse)
+0 = left to right
+1 = right to left (reverse)
 var direction = 0;
 
 // This variable helps determine which PacMan image should be displayed. It flips between values 0 and 1
@@ -37,7 +37,7 @@ function Run() {
 setTimeout(Run, 3000);
 // This function determines the direction of PacMan based on screen edge detection. 
 function checkPageBounds(direction, imgWidth, pos, pageWidth) {
- // let pageWidth = window.innerWidth;
+
         if (direction == 0 && pos + imgWidth > pageWidth) direction = 1;
         if (direction == 1 && pos < 0) direction = 0;
   // TODO: Complete this to reverse direction upon hitting screen edge
